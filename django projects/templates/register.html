@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <style>
+        form {
+            width: 350px;
+            border: 2px solid #000;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            margin: 15% auto;
+        }
+        
+        hr {
+            background-color: gray;
+            outline: none;
+            height: 2px;
+            width: 100%; /* Change to 100% to fill the container */
+        }
+        
+        label {
+            font-weight: bold;
+            margin-right: 10px; /* Adjust margin */
+            flex: 1; /* Add flex property */
+        }
+        
+        .inp {
+            display: flex; /* Add flex display */
+            align-items: center; /* Align items vertically */
+        }
+        h3
+        {
+            text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            flex: 2; /* Add flex property */
+            margin: 10px 10px; /* Adjust margin */
+        }
+        
+        input[type="submit"] {
+            width: 100px;
+            margin-left: 120px;
+            margin-top: 10px; /* Add margin to separate from inputs */
+            background-color: rosybrown;
+            color: #fff;
+            border: none;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="registeration" method="post">
+        {% csrf_token %}
+        <h3>Registeration</h3>
+        <hr>
+        <div class="inp name">
+            <label for="">Name</label><input type="text" name="name">
+        </div>
+        <div class="inp password">
+            <label for="">Password</label><input type="password" name="psw">
+        </div>
+        <div class="inp addr">
+            <label for="">Address</label><input type="text" name="addr">
+        </div>
+        <div class="inp mail">
+            <label for="">Mail</label><input type="email" name="mail">
+        </div>
+        <div class="name">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</body>
+</html>

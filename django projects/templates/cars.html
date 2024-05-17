@@ -1,0 +1,26 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <center><h1>Cars Details</h1></center>
+    {% for i in car %}
+    <div class="container">
+        <figure>
+            <!-- <img src="{{baseUrl}}/{{i.img}}" alt="" width="200px"> -->
+            <img src="{{i.img.url}}" alt="" width="200px">
+        </figure>
+        <figcaption>{{i.name}}</figcaption>
+        <p>Model : {{i.model}}</p>
+        <p>Price : {{i.price}}</p>
+        <p>{{i.desc}}</p>
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+</html>

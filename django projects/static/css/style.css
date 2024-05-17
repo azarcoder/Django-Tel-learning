@@ -1,0 +1,6 @@
+img
+{
+    width: 300px;
+    filter: drop-shadow(3px 3px 3px #000);
+    display: inline-block;
+}
